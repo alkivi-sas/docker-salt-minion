@@ -9,7 +9,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -qq update && \
     wget -O - https://repo.saltstack.com/apt/debian/9/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add - && \
     echo "deb http://repo.saltstack.com/apt/debian/9/amd64/${VERSION} stretch main" > /etc/apt/sources.list.d/saltstack.list && \
     DEBIAN_FRONTEND=noninteractive apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y salt-master salt-api salt-minion
+    DEBIAN_FRONTEND=noninteractive apt-get install -y salt-minion
 
 # Clean image
 RUN apt-get -yqq clean && \
